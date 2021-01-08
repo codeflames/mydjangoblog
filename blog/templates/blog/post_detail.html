@@ -8,19 +8,17 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div >
 
-            <div class="post">
-                {% if post.published_date %}
-                <p class="detail-published">{{ post.published_date }}</p>
 
-                <h2 class="detail-header">{{ post.title }}</h2>
+    <div class="post">
+        {% if post.published_date %}
+        <p class="detail-published">{{ post.published_date }}</p>
 
-                <p>{{ post.text|linebreaksbr }}</p>
-                {% endif %}
-            </div>
-        </div>
+        <h2 class="detail-header">{{ post.title }}</h2>
+
+        <p>{{ post.text|linebreaksbr }}</p>
+        {% endif %}
     </div>
+
 </div>
 {% endblock %}
