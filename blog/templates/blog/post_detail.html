@@ -9,14 +9,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
-            {% for post in posts %}
+        <div >
+
             <div class="post">
-                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                <p class="published">published: {{ post.published_date }}</p>
+                {% if post.published_date %}
+                <p class="detail-published">{{ post.published_date }}</p>
+
+                <h2 class="detail-header">{{ post.title }}</h2>
+
                 <p>{{ post.text|linebreaksbr }}</p>
+                {% endif %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
