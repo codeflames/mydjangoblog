@@ -11,10 +11,10 @@
     <div class="row">
         <div class="col-md-8">
             {% for post in posts %}
-            <div class="post">
+            <div class="post card">
                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                 <p class="published">published: {{ post.published_date }}</p>
-                <p>{{ post.text|linebreaksbr }}</p>
+                <p class="text-truncate">{{ post.text|linebreaksbr }} </p>
             </div>
             {% endfor %}
         </div>

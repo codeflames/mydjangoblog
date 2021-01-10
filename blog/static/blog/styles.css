@@ -32,3 +32,8 @@ h1 a, h2 a{
     color: gray;
     text-align: right;
 }
+
+.post{
+    margin-bottom: 24px;
+    padding: 12px;
+}
